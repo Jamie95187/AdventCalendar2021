@@ -1,7 +1,14 @@
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello");
+        dayOneSolver();
+    }
+
+    private static void dayOneSolver() {
+        DayOne dayOne = new DayOne();
+        dayOne.readFile();
+        dayOne.solver();
     }
 
 }
