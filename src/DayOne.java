@@ -2,11 +2,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class DayOne {
 
-    private Queue<Integer> data = new LinkedList<>();
+    private LinkedList<Integer> data = new LinkedList<>();
 
     public void readFile() {
         String txtFile = "/Users/jamie/IdeaProjects/AdventCalendar2021/src/data/dataOne.txt";
@@ -36,6 +35,19 @@ public class DayOne {
             prevNumber = currNumber;
         }
         System.out.println("Number of increase " + numberOfIncreases);
+    }
+
+    public void solverTwo() {
+        int prevNumberTrio = data.get(0) + data.get(1) + data.get(2);
+        int numberOfTrioIncreases = 0;
+        for (int i = 1; i < data.size()-2; i++) {
+            int currNumberTrio = data.get(i) + data.get(i+1) + data.get(i+2);
+            if (currNumberTrio > prevNumberTrio) {
+                numberOfTrioIncreases++;
+            }
+            prevNumberTrio = currNumberTrio;
+        }
+        System.out.println("Number of trio increase " + numberOfTrioIncreases);
     }
 
     public void printData() {

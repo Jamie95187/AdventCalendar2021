@@ -8,7 +8,8 @@ public class Main {
     private static void dayOneSolver() {
         DayOne dayOne = new DayOne();
         dayOne.readFile();
-        dayOne.solver();
+//        dayOne.solver();
+        dayOne.solverTwo();
     }
 
 }
