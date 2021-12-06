@@ -40,4 +40,22 @@ public class DayTwo {
         System.out.println("Horizontal pos * Depth = " + depth * distance);
     }
 
+    public void solverTwo() {
+        int aim = 0;
+        int depth = 0;
+        int distance = 0;
+        for (String s : instructions) {
+            int value = Integer.parseInt(s.split(" ")[1]);
+            if(s.contains("forward")) {
+                distance += value;
+                depth += value * aim;
+            } else if (s.contains("down")) {
+                aim += value;
+            } else if (s.contains("up")) {
+                aim -= value;
+            }
+        }
+        System.out.println("Adjusted Horizontal pos * Depth = " + depth * distance);
+    }
+
 }

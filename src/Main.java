@@ -16,6 +16,7 @@ public class Main {
         DayTwo dayTwo = new DayTwo();
         dayTwo.readFile();
         dayTwo.solver();
+        dayTwo.solverTwo();
     }
 
 }
