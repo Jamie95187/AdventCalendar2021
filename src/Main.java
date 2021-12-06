@@ -2,7 +2,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        dayOneSolver();
+        dayTwoSolver();
     }
 
     private static void dayOneSolver() {
@@ -10,6 +10,12 @@ public class Main {
         dayOne.readFile();
 //        dayOne.solver();
         dayOne.solverTwo();
+    }
+
+    private static void dayTwoSolver() {
+        DayTwo dayTwo = new DayTwo();
+        dayTwo.readFile();
+        dayTwo.solver();
     }
 
 }
